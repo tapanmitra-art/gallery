@@ -461,8 +461,8 @@ input[type=file]{padding:8px;background:transparent;cursor:pointer}
           </div>
         </div>
         <div class="hero-art">
-          <!-- Best image chosen for the front page: Self Portrait 2 (Jeans) - using exact raw URL -->
-          <img src="https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20002%20-%20size.jpg" alt="Self Portrait 2 (Jeans) by Tapan Mitra" onerror="this.src='https://placehold.co/800x600/f0ebe5/6b6661?text=Self+Portrait+2+(Jeans)'">
+          <!-- Updated Hero Image: The Boot (Footsteps) -->
+          <img src="https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20003%20-%20Serigraph%20-%2030x22.jpg" alt="Footsteps of the Giant - Serigraphy by Tapan Mitra" onerror="this.src='https://placehold.co/800x600/f0ebe5/6b6661?text=The+Grounded+Footstep'">
         </div>
       </div>
 
@@ -923,175 +923,175 @@ themeToggle.addEventListener('click', () => {
 // ==========================================
 // 4. DATA SEEDING & SYNC (FIRESTORE)
 // ==========================================
-// Using the exact URLs provided by the user to match the specific file names on their repo.
+// Using exact URLs. Descriptions redefined for deep philosophical meaning.
 
 const seedData = [
   {
-    title: 'Self Portrait 2 (Jeans)',
-    description: 'A surreal composition featuring a pair of denim jeans floating mid-air against a serene sky and green field.',
+    title: 'Footsteps of the Giant',
+    description: 'A monumental footfall onto a rigid grid. This work explores the immense weight of human existence pressing against the structured, geometric order of society and time. The footstep is a profound mark of individual presence in an otherwise calculated world.',
     yearPainted: '1989',
     medium: 'Serigraphy',
     dimensions: '30x22 in',
     association: 'Private Collection',
     price: null,
-    tags: ['serigraphy', 'surreal', 'jeans', 'sky'],
-    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20002%20-%20size.jpg',
+    tags: ['serigraphy', 'philosophy', 'existence', 'structure', 'scale'],
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20003%20-%20Serigraph%20-%2030x22.jpg',
     added: Date.now()
   },
   {
-    title: 'Self Portrait 3 (Boot)',
-    description: 'A giant work boot stands firmly on a gridded landscape under a blue sky.',
+    title: 'The Weightless Journey',
+    description: 'A pair of denim jeans floats in the liminal space between earth and sky. It represents the transient nature of the human journey, suspended in the quiet void, where the physical body becomes a mere vessel for the passage of time.',
     yearPainted: '1989',
     medium: 'Serigraphy',
     dimensions: '30x22 in',
     association: 'Private Collection',
     price: null,
-    tags: ['serigraphy', 'surreal', 'boot', 'landscape'],
-    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20003%20-%20Serigraph%20-%2030x22.jpg',
+    tags: ['serigraphy', 'philosophy', 'journey', 'void', 'transience'],
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20002%20-%20size.jpg',
     added: Date.now() - 1000
   },
   {
-    title: 'Self Portrait 11 (Green Shirt)',
-    description: 'A ghostly green polo shirt rendered with layered textures and shadow.',
-    yearPainted: '1989',
-    medium: 'Serigraphy',
-    dimensions: '30x22 in',
-    association: 'Private Collection',
-    price: null,
-    tags: ['serigraphy', 'shirt', 'apparel'],
-    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20011%20-%20Serigraph%20-%2030x22.jpg',
-    added: Date.now() - 2000
-  },
-  {
-    title: 'Self Portrait 7 (Bust)',
-    description: 'An abstracted torso in white and muted green, exploring human presence and form.',
-    yearPainted: '1989',
-    medium: 'Serigraphy',
-    dimensions: '30x22 in',
-    association: 'Private Collection',
-    price: null,
-    tags: ['serigraphy', 'abstract', 'figure'],
-    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20007%20-%20Serigraph%20-%2030x22.jpg',
-    added: Date.now() - 3000
-  },
-  {
-    title: 'Self Portrait 3 (Blue Dress)',
-    description: 'A vibrant blue dress with ruffled collar floating against a textured blue and yellow background.',
+    title: 'Architecture of the Intimate',
+    description: 'A fragile, intricate structure suspended against the vastness of an eternal sky. It is a meditation on the vulnerability of human desires and the weightlessness of earthly memory when confronted with the infinite cosmos.',
     yearPainted: '1987',
     medium: 'Serigraphy',
     dimensions: '30x22 in',
     association: 'Private Collection',
     price: null,
-    tags: ['serigraphy', 'dress', 'apparel', 'colorful'],
+    tags: ['serigraphy', 'philosophy', 'infinity', 'vulnerability', 'memory'],
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20001%20-%20Serigraph%20-%2030x22.jpg',
+    added: Date.now() - 2000
+  },
+  {
+    title: 'The Fragmented Self',
+    description: 'An abstracted, headless form divided into stark contrasting halves. Set against a dense cross-hatched void, it deeply explores the duality of the human psyche—the eternal conflict between the seen and unseen, the physical and the spiritual.',
+    yearPainted: '1989',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'philosophy', 'duality', 'identity', 'psyche'],
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20007%20-%20Serigraph%20-%2030x22.jpg',
+    added: Date.now() - 3000
+  },
+  {
+    title: 'Echoes of the Soul',
+    description: 'A luminescent blue garment floats against a chaotic, textured background of gold and blue. It acts as a monument to what once was—a ghostly silhouette that bridges the gap between fleeting memories and eternal stillness.',
+    yearPainted: '1987',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'philosophy', 'memory', 'soul', 'absence'],
     image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20003%20-%20size.jpg',
     added: Date.now() - 4000
   },
   {
-    title: 'Self Portrait 15 (Shirt)',
-    description: 'A green and yellow button-up shirt with an open flap, revealing a tiny blue interior.',
+    title: 'The Constructed Identity',
+    description: 'A garment composed of opposing green and yellow panels hangs over an invisible figure. It symbolizes the societal roles and facades we wear, questioning the authenticity of the self when stripped of its external labels.',
     yearPainted: '1985',
     medium: 'Serigraphy',
     dimensions: '30x22 in',
     association: 'Private Collection',
     price: null,
-    tags: ['serigraphy', 'shirt', 'apparel'],
+    tags: ['serigraphy', 'philosophy', 'identity', 'facade', 'society'],
     image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20012%20-%20size.jpg',
     added: Date.now() - 5000
   },
   {
-    title: 'Self Portrait 2 (Bra)',
-    description: 'A bra floating in a cloudy sky, blending domestic objects with surreal landscapes.',
-    yearPainted: '1987',
-    medium: 'Serigraphy',
-    dimensions: '30x22 in',
-    association: 'Private Collection',
-    price: null,
-    tags: ['serigraphy', 'surreal', 'sky'],
-    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20001%20-%20Serigraph%20-%2030x22.jpg',
-    added: Date.now() - 6000
-  },
-  {
-    title: 'Self Portrait 5 (Abstract)',
-    description: 'Abstract geometric forms with a bowl and face-like shapes on a textured background.',
+    title: 'The Empty Vessel',
+    description: 'A solitary garment hanging in the shadows, an echo of the human form. The piece speaks to profound absence—the lingering, silent presence of the wearer after they have departed, leaving only the shell behind.',
     yearPainted: '1989',
     medium: 'Serigraphy',
     dimensions: '30x22 in',
     association: 'Private Collection',
     price: null,
-    tags: ['serigraphy', 'abstract', 'geometric'],
+    tags: ['serigraphy', 'philosophy', 'absence', 'still life', 'shadow'],
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20006%20-%20Serigraph%20-%2030x22.jpg',
+    added: Date.now() - 6000
+  },
+  {
+    title: 'Geometry of the Mind',
+    description: 'A bold collision of abstract geometric forms and vivid colors. Through the chaotic dance of circles, triangles, and fragmented shapes, the artist maps the internal landscape of perception, thought, and fractured memory.',
+    yearPainted: '1989',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'philosophy', 'abstract', 'perception', 'geometry'],
     image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20005%20-%20size.jpg',
     added: Date.now() - 7000
   },
   {
-    title: 'Self Portrait 6 (Tank Top)',
-    description: 'A white tank top hanging on a wooden hanger against a dark green background.',
+    title: 'The Exposed Interior',
+    description: 'An unbuttoned garment revealing the raw, visceral nature of the body beneath. It is a stripping away of formality—a confrontation with our primal existence and the vulnerability of being exposed to the world.',
     yearPainted: '1989',
     medium: 'Serigraphy',
     dimensions: '30x22 in',
     association: 'Private Collection',
     price: null,
-    tags: ['serigraphy', 'apparel', 'still life'],
-    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20006%20-%20Serigraph%20-%2030x22.jpg',
+    tags: ['serigraphy', 'philosophy', 'vulnerability', 'primal', 'exposure'],
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20009%20-%20size.jpg',
     added: Date.now() - 8000
   },
   {
-    title: 'Self Portrait 9 (Blue Shirt)',
-    description: 'A blue short-sleeve collared shirt with visible chest hair, set against a textured teal background.',
-    yearPainted: '1989',
-    medium: 'Serigraphy',
-    dimensions: '30x22 in',
-    association: 'Private Collection',
-    price: null,
-    tags: ['serigraphy', 'shirt', 'apparel'],
-    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20009%20-%20size.jpg',
-    added: Date.now() - 9000
-  },
-  {
-    title: 'Self Portrait 10 (White Dress)',
-    description: 'A white dress with yellow accents floating over a green and blue gradient landscape.',
+    title: 'Suspended in the Ethereal',
+    description: 'A white garment accented with pale bands floats weightlessly over a tranquil gradient landscape. It represents the detachment of the soul from the physical realm, suspended in the serene space between existence and the infinite.',
     yearPainted: '1987',
     medium: 'Serigraphy',
     dimensions: '30x22 in',
     association: 'Private Collection',
     price: null,
-    tags: ['serigraphy', 'dress', 'apparel', 'surreal'],
+    tags: ['serigraphy', 'philosophy', 'ethereal', 'detachment', 'infinity'],
     image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20010%20-%20Serigraph%20-%2030x22.jpg',
-    added: Date.now() - 10000
+    added: Date.now() - 9000
   },
   {
-    title: 'Self Portrait 13 (Sketch)',
-    description: 'A black and white detailed sketch of a tank top, showcasing the artist\'s draughtsmanship.',
+    title: 'The Essence of Form',
+    description: 'Stripped of color and context, this meticulous monochromatic study elevates the mundane into the profound. It is a meditation on texture, shadow, and the fundamental, structural geometry that underpins our reality.',
     yearPainted: '1989',
     medium: 'Lithograph / Drawing',
     dimensions: '30x22 in',
     association: 'Private Collection',
     price: null,
-    tags: ['drawing', 'sketch', 'monochrome', 'apparel'],
+    tags: ['drawing', 'philosophy', 'form', 'structure', 'monochrome'],
     image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20013%20-%20size.jpg',
+    added: Date.now() - 10000
+  },
+  {
+    title: 'The Commodified Self',
+    description: 'A vibrantly structured garment stands against a backdrop of mechanical halftone patterns. It is a critical reflection on modern existence—how identity is flattened and mass-produced, reduced to a patterned image in a commodified world.',
+    yearPainted: '1989',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'philosophy', 'society', 'identity', 'halftone'],
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20014%20-%20size.jpg',
     added: Date.now() - 11000
   },
   {
-    title: 'Self Portrait 14 (Pink Dress)',
-    description: 'A pink dress with hands on hips, set against a halftone patterned sky and golden ground.',
+    title: 'The Tethered Soul',
+    description: 'An object floats above a vivid, textured landscape, guided by thin, invisible strings. It explores the tension between the desire for absolute freedom and the gravitational pull of earthly attachments that bind us.',
     yearPainted: '1989',
     medium: 'Serigraphy',
     dimensions: '30x22 in',
     association: 'Private Collection',
     price: null,
-    tags: ['serigraphy', 'dress', 'pink', 'halftone'],
-    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20014%20-%20size.jpg',
+    tags: ['serigraphy', 'philosophy', 'freedom', 'attachment', 'nature'],
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20004%20-%20size.jpg',
     added: Date.now() - 12000
   },
   {
-    title: 'Self Portrait 4 (Kite)',
-    description: 'A white kite with a red tail flying over a textured yellow and green field.',
+    title: 'The Silent Observer',
+    description: 'A profile of a garment set against a deep, consuming blue. It depicts the shadow of the self, exploring how what we wear becomes a second skin, obscuring the true form beneath and acting as a silent observer of the world.',
     yearPainted: '1989',
     medium: 'Serigraphy',
     dimensions: '30x22 in',
     association: 'Private Collection',
     price: null,
-    tags: ['serigraphy', 'kite', 'landscape', 'nature'],
-    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20004%20-%20size.jpg',
+    tags: ['serigraphy', 'philosophy', 'observer', 'profile', 'shadow'],
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20011%20-%20Serigraph%20-%2030x22.jpg',
     added: Date.now() - 13000
   }
 ];
