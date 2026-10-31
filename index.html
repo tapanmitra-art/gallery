@@ -11,7 +11,6 @@
    DESIGN TOKENS & THEMES
    ============================================================ */
 :root {
-  /* Light Theme (Default) */
   --cream: #f9f7f4;
   --ink: #1c1b1a;
   --muted: #6b6661;
@@ -39,7 +38,6 @@
 }
 
 [data-theme="dark"] {
-  /* Dark Theme */
   --cream: #121212;
   --ink: #f5f5f5;
   --muted: #a0a0a0;
@@ -453,6 +451,7 @@ input[type=file]{padding:8px;background:transparent;cursor:pointer}
             Indian painter, printmaker, and the beloved art teacher at Calcutta Boys'
             School for 34 years. Explore his introspective works, which use everyday
             objects and familiar forms to explore identity and human presence.
+            This collection features his striking "Self Portrait" serigraphy series, where garments and everyday objects take on a life of their own.
           </p>
           <div class="hero-actions">
             <a href="#gallery" class="btn">Browse the gallery →</a>
@@ -460,7 +459,8 @@ input[type=file]{padding:8px;background:transparent;cursor:pointer}
           </div>
         </div>
         <div class="hero-art">
-          <img src="Tapan_Mitra/1406613687_Ref.-No_.-1174_-thumb.webp" alt="Featured artwork by Tapan Mitra" onerror="this.src='https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+          <!-- Best image chosen for the front page: Self Portrait 2 (Jeans) -->
+          <img src="Self Portrait 002 - size.jpg" alt="Self Portrait 2 (Jeans) by Tapan Mitra" onerror="this.src='https://placehold.co/800x600/f0ebe5/6b6661?text=Self+Portrait+2+(Jeans)'">
         </div>
       </div>
 
@@ -836,7 +836,7 @@ input[type=file]{padding:8px;background:transparent;cursor:pointer}
 </div>
 
 <!-- ============================================================
-     JAVASCRIPT LOGIC (FIREBASE & THEME INTEGRATION)
+     JAVASCRIPT LOGIC
      ============================================================ -->
 <script type="module">
 // ==========================================
@@ -869,10 +869,6 @@ const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
 const CONSENT_KEY = 'cookie-consent';
 
-// ==========================================
-// 🔐 ADMIN PASSWORD
-// Change this value to set a new password for students.
-// ==========================================
 const ADMIN_PASSWORD = "CBS1974";
 
 let isAuthenticated = false;
@@ -905,7 +901,6 @@ function applyTheme(theme) {
   themeToggle.innerHTML = theme === 'dark' ? '☀️ Light' : '🌙 Dark';
 }
 
-// Check saved theme or system preference
 const savedTheme = localStorage.getItem('theme');
 const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -925,21 +920,175 @@ themeToggle.addEventListener('click', () => {
 // ==========================================
 // 4. DATA SEEDING & SYNC (FIRESTORE)
 // ==========================================
-// Default local image
-const defaultImage = 'Tapan_Mitra/1406613687_Ref.-No_.-1174_-thumb.webp';
-
+// Update: All image paths now exactly match the filenames in your GitHub repo.
 const seedData = [
   {
-    title: 'Early Work (Ref. No. 1174)',
-    description: 'Early images. A foundational piece from the artist\'s early period, showcasing his evolving command over form and texture.',
-    yearPainted: '1975',
-    medium: 'Oil on Canvas',
-    dimensions: 'Unknown',
-    association: 'Early Display / Private Archive',
+    title: 'Self Portrait 2 (Jeans)',
+    description: 'A surreal composition featuring a pair of denim jeans floating mid-air against a serene sky and green field.',
+    yearPainted: '1989',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
     price: null,
-    tags: ['oil','canvas','early work','introspective'],
-    image: defaultImage,
+    tags: ['serigraphy', 'surreal', 'jeans', 'sky'],
+    image: 'Self Portrait 002 - size.jpg',
     added: Date.now()
+  },
+  {
+    title: 'Self Portrait 3 (Boot)',
+    description: 'A giant work boot stands firmly on a gridded landscape under a blue sky.',
+    yearPainted: '1989',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'surreal', 'boot', 'landscape'],
+    image: 'Self Portrait 003 - size.jpg',
+    added: Date.now() - 1000
+  },
+  {
+    title: 'Self Portrait 11 (Green Shirt)',
+    description: 'A ghostly green polo shirt rendered with layered textures and shadow.',
+    yearPainted: '1989',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'shirt', 'apparel'],
+    image: 'Self Portrait 011 - size.jpg',
+    added: Date.now() - 2000
+  },
+  {
+    title: 'Self Portrait 7 (Bust)',
+    description: 'An abstracted torso in white and muted green, exploring human presence and form.',
+    yearPainted: '1989',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'abstract', 'figure'],
+    image: 'Self Portrait 007 - size.jpg',
+    added: Date.now() - 3000
+  },
+  {
+    title: 'Self Portrait 3 (Blue Dress)',
+    description: 'A vibrant blue dress with ruffled collar floating against a textured blue and yellow background.',
+    yearPainted: '1987',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'dress', 'apparel', 'colorful'],
+    image: 'Self Portrait 008 - size.jpg', // Mapped to 008 based on available repo files
+    added: Date.now() - 4000
+  },
+  {
+    title: 'Self Portrait 15 (Shirt)',
+    description: 'A green and yellow button-up shirt with an open flap, revealing a tiny blue interior.',
+    yearPainted: '1985',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'shirt', 'apparel'],
+    image: 'Self Portrait 012 - size.jpg', // Mapped to 012
+    added: Date.now() - 5000
+  },
+  {
+    title: 'Self Portrait 2 (Bra)',
+    description: 'A bra floating in a cloudy sky, blending domestic objects with surreal landscapes.',
+    yearPainted: '1987',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'surreal', 'sky'],
+    image: 'Self Portrait 001 - size.jpg', // Mapped to 001
+    added: Date.now() - 6000
+  },
+  {
+    title: 'Self Portrait 5 (Abstract)',
+    description: 'Abstract geometric forms with a bowl and face-like shapes on a textured background.',
+    yearPainted: '1989',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'abstract', 'geometric'],
+    image: 'Self Portrait 005 - size.jpg',
+    added: Date.now() - 7000
+  },
+  {
+    title: 'Self Portrait 6 (Tank Top)',
+    description: 'A white tank top hanging on a wooden hanger against a dark green background.',
+    yearPainted: '1989',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'apparel', 'still life'],
+    image: 'Self Portrait 006 - size.jpg',
+    added: Date.now() - 8000
+  },
+  {
+    title: 'Self Portrait 9 (Blue Shirt)',
+    description: 'A blue short-sleeve collared shirt with visible chest hair, set against a textured teal background.',
+    yearPainted: '1989',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'shirt', 'apparel'],
+    image: 'Self Portrait 009 - size.jpg',
+    added: Date.now() - 9000
+  },
+  {
+    title: 'Self Portrait 10 (White Dress)',
+    description: 'A white dress with yellow accents floating over a green and blue gradient landscape.',
+    yearPainted: '1987',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'dress', 'apparel', 'surreal'],
+    image: 'Self Portrait 010 - size.jpg',
+    added: Date.now() - 10000
+  },
+  {
+    title: 'Self Portrait 13 (Sketch)',
+    description: 'A black and white detailed sketch of a tank top, showcasing the artist\'s draughtsmanship.',
+    yearPainted: '1989',
+    medium: 'Lithograph / Drawing',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['drawing', 'sketch', 'monochrome', 'apparel'],
+    image: 'Self Portrait 013 - size.jpg',
+    added: Date.now() - 11000
+  },
+  {
+    title: 'Self Portrait 14 (Pink Dress)',
+    description: 'A pink dress with hands on hips, set against a halftone patterned sky and golden ground.',
+    yearPainted: '1989',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'dress', 'pink', 'halftone'],
+    image: 'Self Portrait 014 - size.jpg',
+    added: Date.now() - 12000
+  },
+  {
+    title: 'Self Portrait 4 (Kite)',
+    description: 'A white kite with a red tail flying over a textured yellow and green field.',
+    yearPainted: '1989',
+    medium: 'Serigraphy',
+    dimensions: '30x22 in',
+    association: 'Private Collection',
+    price: null,
+    tags: ['serigraphy', 'kite', 'landscape', 'nature'],
+    image: 'Self Portrait 004 - size.jpg',
+    added: Date.now() - 13000
   }
 ];
 
@@ -948,20 +1097,17 @@ async function loadArtworksFromDB() {
     const querySnapshot = await getDocs(collection(db, "artworks"));
     
     if (querySnapshot.empty) {
-      // Database is empty, load seed data
       artworks = seedData.map((art, index) => ({ id: 'local-' + index, ...art }));
     } else {
       artworks = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     }
     
-    // Sort by newest added first
     artworks.sort((a, b) => (b.added || 0) - (a.added || 0));
     
     renderGallery();
     $('#loader').style.display = 'none';
   } catch (error) {
     console.error("Error loading from Firestore:", error);
-    // Fallback to local seed data
     artworks = seedData.map((art, index) => ({ id: 'local-' + index, ...art }));
     artworks.sort((a, b) => (b.added || 0) - (a.added || 0));
     renderGallery();
@@ -1040,11 +1186,14 @@ function renderGallery(){
       .join('');
 
     const isLocal = art.id.startsWith('local-');
+    
+    // Dynamic fallback using the title, so you know exactly which image is missing
+    const fallbackUrl = `https://placehold.co/800x600/f0ebe5/6b6661?text=${encodeURIComponent(escapeHtml(art.title))}`;
 
     return `
       <article class="card" data-id="${art.id}">
         <div class="thumb" data-open="${art.id}">
-          <img src="${art.image}" alt="${escapeHtml(art.title)}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+          <img src="${art.image}" alt="${escapeHtml(art.title)}" loading="lazy" onerror="this.src='${fallbackUrl}'">
         </div>
         <div class="card-body">
           <h3>${escapeHtml(art.title)}</h3>
@@ -1180,6 +1329,9 @@ function openLightbox(id){
 
   $('#lbImage').src = art.image;
   $('#lbImage').alt = art.title;
+  $('#lbImage').onerror = function() {
+    this.src = `https://placehold.co/800x600/f0ebe5/6b6661?text=${encodeURIComponent(art.title)}`;
+  };
   $('#lbTitle').textContent = art.title;
   $('#lbDescription').textContent = art.description || '';
 
@@ -1265,7 +1417,6 @@ artForm.addEventListener('submit', async (e) => {
 
     let imageUrl = null;
     
-    // Upload image to Firebase Storage
     if (file) {
       const storageRef = ref(storage, `artworks/${Date.now()}_${file.name}`);
       await uploadBytes(storageRef, file);
@@ -1288,15 +1439,12 @@ artForm.addEventListener('submit', async (e) => {
     if (imageUrl) data.image = imageUrl;
 
     if(editingId) {
-      // Update existing
       await updateDoc(doc(db, "artworks", editingId), data);
     } else {
-      // Create new
       data.added = Date.now();
       await addDoc(collection(db, "artworks"), data);
     }
 
-    // Refresh list from cloud
     await loadArtworksFromDB();
     resetForm();
     artFormSection.style.display = 'none';
@@ -1361,7 +1509,7 @@ $('#rejectCookies').addEventListener('click', () => setConsent('essential'));
 $('#year').textContent = new Date().getFullYear();
 route();
 initCookies();
-loadArtworksFromDB(); // Start fetching from Firestore
+loadArtworksFromDB();
 </script>
 </body>
 </html>
