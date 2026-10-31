@@ -459,8 +459,8 @@ input[type=file]{padding:8px;background:transparent;cursor:pointer}
           </div>
         </div>
         <div class="hero-art">
-          <!-- Best image chosen for the front page: Self Portrait 2 (Jeans) -->
-          <img src="https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20002%20-%20size.jpg" alt="Self Portrait 2 (Jeans) by Tapan Mitra" onerror="this.src='https://placehold.co/800x600/f0ebe5/6b6661?text=Self+Portrait+2+(Jeans)'">
+          <!-- Best image chosen for the front page: Self Portrait 2 (Jeans) - using exact raw URL -->
+          <img src="https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20002%20-%20size.jpg" alt="Self Portrait 2 (Jeans) by Tapan Mitra" onerror="this.src='https://placehold.co/800x600/f0ebe5/6b6661?text=Self+Portrait+2+(Jeans)'">
         </div>
       </div>
 
@@ -920,8 +920,7 @@ themeToggle.addEventListener('click', () => {
 // ==========================================
 // 4. DATA SEEDING & SYNC (FIRESTORE)
 // ==========================================
-// Using the '- size.jpg' naming convention to ensure all images are found.
-const BASE_RAW_URL = 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/';
+// Using the exact URLs provided by the user to match the specific file names on their repo.
 
 const seedData = [
   {
@@ -933,7 +932,7 @@ const seedData = [
     association: 'Private Collection',
     price: null,
     tags: ['serigraphy', 'surreal', 'jeans', 'sky'],
-    image: BASE_RAW_URL + 'Self%20Portrait%20002%20-%20size.jpg',
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20002%20-%20size.jpg',
     added: Date.now()
   },
   {
@@ -945,7 +944,7 @@ const seedData = [
     association: 'Private Collection',
     price: null,
     tags: ['serigraphy', 'surreal', 'boot', 'landscape'],
-    image: BASE_RAW_URL + 'Self%20Portrait%20003%20-%20size.jpg',
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20003%20-%20Serigraph%20-%2030x22.jpg',
     added: Date.now() - 1000
   },
   {
@@ -957,7 +956,7 @@ const seedData = [
     association: 'Private Collection',
     price: null,
     tags: ['serigraphy', 'shirt', 'apparel'],
-    image: BASE_RAW_URL + 'Self%20Portrait%20011%20-%20size.jpg',
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20011%20-%20Serigraph%20-%2030x22.jpg',
     added: Date.now() - 2000
   },
   {
@@ -969,7 +968,7 @@ const seedData = [
     association: 'Private Collection',
     price: null,
     tags: ['serigraphy', 'abstract', 'figure'],
-    image: BASE_RAW_URL + 'Self%20Portrait%20007%20-%20size.jpg',
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20007%20-%20Serigraph%20-%2030x22.jpg',
     added: Date.now() - 3000
   },
   {
@@ -981,7 +980,7 @@ const seedData = [
     association: 'Private Collection',
     price: null,
     tags: ['serigraphy', 'dress', 'apparel', 'colorful'],
-    image: BASE_RAW_URL + 'Self%20Portrait%20008%20-%20size.jpg',
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20003%20-%20size.jpg',
     added: Date.now() - 4000
   },
   {
@@ -993,7 +992,7 @@ const seedData = [
     association: 'Private Collection',
     price: null,
     tags: ['serigraphy', 'shirt', 'apparel'],
-    image: BASE_RAW_URL + 'Self%20Portrait%20012%20-%20size.jpg',
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20012%20-%20size.jpg',
     added: Date.now() - 5000
   },
   {
@@ -1005,7 +1004,7 @@ const seedData = [
     association: 'Private Collection',
     price: null,
     tags: ['serigraphy', 'surreal', 'sky'],
-    image: BASE_RAW_URL + 'Self%20Portrait%20001%20-%20size.jpg',
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20001%20-%20Serigraph%20-%2030x22.jpg',
     added: Date.now() - 6000
   },
   {
@@ -1017,7 +1016,7 @@ const seedData = [
     association: 'Private Collection',
     price: null,
     tags: ['serigraphy', 'abstract', 'geometric'],
-    image: BASE_RAW_URL + 'Self%20Portrait%20005%20-%20size.jpg',
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20005%20-%20size.jpg',
     added: Date.now() - 7000
   },
   {
@@ -1029,7 +1028,7 @@ const seedData = [
     association: 'Private Collection',
     price: null,
     tags: ['serigraphy', 'apparel', 'still life'],
-    image: BASE_RAW_URL + 'Self%20Portrait%20006%20-%20size.jpg',
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20006%20-%20Serigraph%20-%2030x22.jpg',
     added: Date.now() - 8000
   },
   {
@@ -1041,7 +1040,7 @@ const seedData = [
     association: 'Private Collection',
     price: null,
     tags: ['serigraphy', 'shirt', 'apparel'],
-    image: BASE_RAW_URL + 'Self%20Portrait%20009%20-%20size.jpg',
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20009%20-%20size.jpg',
     added: Date.now() - 9000
   },
   {
@@ -1053,7 +1052,7 @@ const seedData = [
     association: 'Private Collection',
     price: null,
     tags: ['serigraphy', 'dress', 'apparel', 'surreal'],
-    image: BASE_RAW_URL + 'Self%20Portrait%20010%20-%20size.jpg',
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Portrait%20010%20-%20Serigraph%20-%2030x22.jpg',
     added: Date.now() - 10000
   },
   {
@@ -1065,7 +1064,7 @@ const seedData = [
     association: 'Private Collection',
     price: null,
     tags: ['drawing', 'sketch', 'monochrome', 'apparel'],
-    image: BASE_RAW_URL + 'Self%20Portrait%20013%20-%20size.jpg',
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20013%20-%20size.jpg',
     added: Date.now() - 11000
   },
   {
@@ -1077,7 +1076,7 @@ const seedData = [
     association: 'Private Collection',
     price: null,
     tags: ['serigraphy', 'dress', 'pink', 'halftone'],
-    image: BASE_RAW_URL + 'Self%20Portrait%20014%20-%20size.jpg',
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20014%20-%20size.jpg',
     added: Date.now() - 12000
   },
   {
@@ -1089,7 +1088,7 @@ const seedData = [
     association: 'Private Collection',
     price: null,
     tags: ['serigraphy', 'kite', 'landscape', 'nature'],
-    image: BASE_RAW_URL + 'Self%20Portrait%20004%20-%20size.jpg',
+    image: 'https://raw.githubusercontent.com/tapanmitra-art/gallery/main/Self%20Potrait%20004%20-%20size.jpg',
     added: Date.now() - 13000
   }
 ];
