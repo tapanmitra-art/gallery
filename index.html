@@ -211,6 +211,8 @@ nav a.active{background:var(--ink);color:var(--cream)}
   transition: border-color .3s;
 }
 .portrait span{font-family:Georgia,serif;font-size:4rem;color:#fff;opacity:.85}
+.portrait img {width: 100%; height: 100%; object-fit: cover;}
+
 .timeline{list-style:none;padding:0;margin:26px 0 0;border-left:2px solid var(--line)}
 .timeline li{position:relative;padding:0 0 22px 26px}
 .timeline li::before{
@@ -493,8 +495,9 @@ input[type=file]{padding:8px;background:transparent;cursor:pointer}
       </div>
 
       <div class="about-grid">
-        <div class="portrait" aria-label="Portrait placeholder">
-          <span>TM</span>
+        <!-- Updated with the portrait image -->
+        <div class="portrait" aria-label="Portrait of Tapan Mitra">
+          <img src="https://raw.githubusercontent.com/tapanmitra-art/gallery/main/tapan%20mitra.jpg" alt="Tapan Mitra" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>TM</span>';">
         </div>
         <div>
           <h2>Tapan Mitra</h2>
